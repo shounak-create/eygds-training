@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Only</title>
+</head>
+<body>
+
+<form>
+    <fieldset>
+        <legend><b>Registration Form</b></legend>
+
+        First Name:
+        <input type="text" placeholder="Enter first name" required>
+        <br><br>
+
+        Last Name:
+        <input type="text" placeholder="Enter last name" required>
+        <br><br>
+
+        Email:
+        <input type="email" placeholder="example@gmail.com" required>
+        <br><br>
+
+        Password:
+        <input type="password" minlength="6" required>
+        <br><br>
+
+        Date of Birth:
+        <input type="date" required>
+        <br><br>
+
+        Gender:
+        <br>
+        <input type="radio" name="gender" required> Male
+        <br>
+        <input type="radio" name="gender"> Female
+        <br>
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        Phone Number:
+        <input type="tel" placeholder="10 digit number"
+               pattern="[0-9]{10}" required>
+        <br><br>
+
+        State:
+        <input list="states" placeholder="Select state" required>
+        <datalist id="states">
+            <option value="Maharashtra">
+            <option value="Punjab">
+            <option value="Haryana">
+            <option value="Gujarat">
+        </datalist>
+        <br><br>
+
+        Skill Level (0–10):
+        <input type="range" min="0" max="10">
+        <br><br>
+
+        Upload CV:
+        <input type="file" required>
+        <br><br>
+
+        Education:
+        <br>
+        <input type="checkbox"> 10th Passed
+        <br>
+        <input type="checkbox"> 12th Passed
+        <br>
+        <input type="checkbox"> Graduation
+        <br><br>
+
+        Preferred Interview Time:
+        <input type="time">
+        <br><br>
+
+        Website (if any):
+        <input type="url" placeholder="https://example.com">
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </fieldset>
+</form>
+
+</body>
+</html>

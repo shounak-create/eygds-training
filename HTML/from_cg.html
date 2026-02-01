@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+        }
+
+        .form-box {
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .gender input,
+        .edu input {
+            width: auto;
+        }
+
+        .range-value {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+    <h2>Registration Form</h2>
+
+    <form>
+        <label>First Name</label>
+        <input type="text" required placeholder="Enter your first name">
+
+        <label>Last Name</label>
+        <input type="text" required placeholder="Enter your last name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Password</label>
+        <input type="password">
+
+        <label>Date of Birth</label>
+        <input type="date">
+
+        <label>Gender</label>
+        <div class="gender">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <label>Phone</label>
+        <input type="tel" placeholder="Enter phone number">
+
+        <label>State</label>
+        <select>
+            <option disabled selected>Select State</option>
+            <option>Maharashtra</option>
+            <option>Punjab</option>
+            <option>Haryana</option>
+        </select>
+
+        <label>Expert Level:
+            <span class="range-value" id="level">5</span>
+        </label>
+        <input type="range" min="0" max="10" value="5"
+               oninput="document.getElementById('level').innerText=this.value">
+
+        <label>Upload CV</label>
+        <input type="file">
+
+        <label>Education</label>
+        <div class="edu">
+            <input type="checkbox"> 10th
+            <input type="checkbox"> 12th
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
